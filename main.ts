@@ -154,7 +154,7 @@ async function handleTCPOutBound(
 ) {
   async function connectAndWrite(address, port) {
     // Make a TCP connection
-    const tcpSocket = await Deno.connect({
+    const tcpSocket = await Deno.connectTls({
       port: port,
       hostname: address,
     })
